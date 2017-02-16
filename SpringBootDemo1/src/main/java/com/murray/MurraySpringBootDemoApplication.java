@@ -1,6 +1,6 @@
 package com.murray;
 
-import com.murray.com.murray.model.Person;
+import com.murray.model.Person;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -25,7 +25,7 @@ import java.util.List;
 
 @Controller
 @SpringBootApplication
-@MapperScan("com.murray.com.murray.mapper")
+@MapperScan("com.murray.mapper") //Mybatis的映射路径（package路径）
 public class MurraySpringBootDemoApplication {
 
     private static Logger log = LoggerFactory.getLogger(MurraySpringBootDemoApplication.class);

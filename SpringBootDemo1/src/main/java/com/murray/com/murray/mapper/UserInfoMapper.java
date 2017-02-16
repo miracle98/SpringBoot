@@ -1,1 +1,0 @@
-package com.murray.com.murray.mapper;import com.murray.com.murray.model.UserInfo;/** * Created by chujulong on 2017/2/15. */public interface UserInfoMapper {    UserInfo findUserInfo();}

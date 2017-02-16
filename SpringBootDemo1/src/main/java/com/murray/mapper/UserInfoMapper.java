@@ -1,0 +1,1 @@
+package com.murray.mapper;import com.murray.model.UserInfo;import java.util.List;/** * Created by chujulong on 2017/2/15. */public interface UserInfoMapper {    List<UserInfo> selectAll();    UserInfo selectById(int id);    int delete(int id);    int update(UserInfo userInfo);    int insert(UserInfo userInfo);}
