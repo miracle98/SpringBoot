@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.murray.mapper.UserInfoMapper">
     <!--<typeAliases> 未研究-->
-        <!--<typeAlias type="com.murray.model.UserInfo" alias="User" />-->
+    <!--<typeAlias type="com.murray.model.UserInfo" alias="User" />-->
     <!--</typeAliases>-->
 
     <resultMap id="UserInfoMap" type="com.murray.model.UserInfo">
@@ -34,4 +34,13 @@
         VALUES
         (#{uname},#{unumber})
     </insert>
+    <insert id="insertBatch" useGeneratedKeys="true" keyProperty="id" parameterType="java.util.List">
+        INSERT INTO spingmvc.user_info
+        (uname,unumber)
+        VALUES
+        <foreach collection="list" separator="," item="item">
+            (#{item.uname},#{item.unumber})
+        </foreach>
+    </insert>
+
 </mapper>
