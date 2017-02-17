@@ -11,7 +11,7 @@
         <result column="unumber" property="unumber" jdbcType="INTEGER"></result>
     </resultMap>
     <select id="selectAll" resultMap="UserInfoMap">
-      SELECT id,uname,unumber FROM spingmvc.user_info;
+      SELECT id,uname,unumber FROM spingmvc.user_info WHERE 1=1 ORDER BY id;
     </select>
     <select id="selectById" resultMap="UserInfoMap" parameterType="java.lang.Integer">
       SELECT id,uname,unumber FROM spingmvc.user_info WHERE id = #{id,jdbcType=INTEGER};
